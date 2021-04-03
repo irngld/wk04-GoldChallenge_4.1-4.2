@@ -18,6 +18,16 @@
 
 // Create a polygon with side lengths 3, 3, 8, and 8
 
+class Polygon {
+    constructor(array) {
+        this.array = array;
+    }
+    perimeter() {
+        return this.array.reduce((accumulator, currentValue) => accumulator + currentValue);
+      }
+}
+ 
+let shapePoly = new Polygon([3, 3, 8, 8]);
 
-  
 // Print the perimeter
+console.log(shapePoly.perimeter());

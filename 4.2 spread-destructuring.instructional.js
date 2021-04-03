@@ -17,3 +17,31 @@ gifts: [],
 clothing: [],
 grocery: []
 };
+
+
+let [a, b, c, d] = shoppingList; // destructuring
+// console.log(a, b, c, d);
+
+shoppingList = [...a, ...b, ...c, ...d]; // "shoppingList =" reinitializing 
+console.log(shoppingList);
+
+shoppingList.map((e, index) => {
+    if (index < 3) {
+        // console.log(`${index}: is less than 3`);
+        obj.grocery.push(e);
+    }
+    else if (index > 2 && index < 6) {
+        // console.log(`${index}: is less than 6`);
+        obj.cleaning.push(e);
+    }
+    else if (index > 5 && index < 9) {
+        // console.log(`${index}: is less than 9`);
+        obj.gifts.push(e);
+    }
+    else {
+        // console.log(`${index}: is less than everything else`);
+        obj.clothing.push(e);
+    }
+})
+
+console.log(obj);
